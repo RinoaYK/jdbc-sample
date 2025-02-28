@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: ${URL}
+    username: ${USER}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    enabled: true
+    repair: true
