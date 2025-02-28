@@ -31,6 +31,8 @@ dependencies {
 	implementation("org.flywaydb:flyway-mysql:11.3.3")
 	implementation("com.mysql:mysql-connector-j:9.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	// https://mvnrepository.com/artifact/net.datafaker/datafaker
+	implementation("net.datafaker:datafaker:2.4.2")
 
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")

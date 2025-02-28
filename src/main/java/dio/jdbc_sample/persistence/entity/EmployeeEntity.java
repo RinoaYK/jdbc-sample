@@ -1,36 +1,32 @@
 package dio.jdbc_sample.persistence.entity;
 
 import dio.jdbc_sample.persistence.EmployeeDAO;
-import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.time.OffsetDateTime;
 import java.util.Date;
+import java.util.List;
 import java.util.TimeZone;
 import java.util.function.UnaryOperator;
 
-@Entity
 @Data
-@Table(name = "employees")
 public class EmployeeEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
     private String name;
 
-    @Column(name = "salary")
     private BigDecimal salary;
 
-    @Column(name = "birthday")
     private OffsetDateTime birthday;
 
-    @Column(name = "created_at")
     private Date createdAt;
+
+    private List<ContactEntity> contacts;
+
+    private List<ModuleEntity> modules;
 
     @Override
     public String toString() {
