@@ -1,24 +1,16 @@
 package dio.jdbc_sample;
 
-import dio.jdbc_sample.persistence.ConnectionUtil;
 import dio.jdbc_sample.persistence.EmployeeDAO;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import java.sql.SQLException;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
-public class Main {
+public class Application {
 
 	private final static EmployeeDAO employeeDAO = new EmployeeDAO();
 
 	public static void main(String[] args) {
-
-/*
-		try(var connection = ConnectionUtil.getConnection()){
-			System.out.println("Conectou!");
-		}catch (SQLException ex){
-			ex.printStackTrace();
-		}
- */
+		new SpringApplicationBuilder(Application.class)
+				.run(args);
 	}
-
 }

@@ -24,14 +24,17 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.flywaydb:flyway-core")
-	implementation("org.flywaydb:flyway-sqlserver")
-	compileOnly("org.projectlombok:lombok")
+	// https://mvnrepository.com/artifact/org.flywaydb/flyway-core
+	implementation("org.flywaydb:flyway-core:11.3.3")
+	// https://mvnrepository.com/artifact/org.flywaydb/flyway-mysql
+	implementation("org.flywaydb:flyway-mysql:11.3.3")
 	implementation("com.mysql:mysql-connector-j:9.2.0")
-	runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
