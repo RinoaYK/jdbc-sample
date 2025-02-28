@@ -19,19 +19,19 @@ public class Application {
 		new SpringApplicationBuilder(Application.class)
 				.run(args);
 
-//		employeeEntity.insertTable(employeeDAO, "Ana", 1500.0, birthday -> birthday.minusYears(8).minusMonths(1));
+    //	employeeEntity.insertTable(employeeDAO, "Angela", 2500.0, birthday -> birthday.minusYears(50).minusMonths(1));
 
 //		employeeDAO.findAll().forEach(System.out::println);
 
 //		System.out.println(employeeDAO.findById(1));
 
 /*		var update = new EmployeeEntity();
-		update.setId(6L);
-		update.setName("Kyo");
-		update.setSalary(new BigDecimal("1000"));
-		update.setBirthday(OffsetDateTime.now().minusYears(1).plusMonths(4));
+		update.setId(17L);
+		update.setName("Angel");
+		//update.setSalary(new BigDecimal("1000"));
+		update.setBirthday(OffsetDateTime.now().minusYears(8).plusMonths(6));
 		employeeDAO.update(update);*/
 
-		//employeeDAO.delete(4);
+		//employeeDAO.delete(16);
 	}
 }
